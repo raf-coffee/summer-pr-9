@@ -1,0 +1,56 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+// Default variable overrides
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.font-xl {
+  font-size: 2rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: url("/right.svg");
+  display: block;
+  margin-top: 2px;
+}
+
+.fs-14 {
+  font-size: 0.9rem;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
