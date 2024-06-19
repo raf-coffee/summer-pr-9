@@ -2,7 +2,7 @@ import { Button, Col, Container, Image, Row } from "react-bootstrap";
 
 export function Description() {
   return (
-    <Container>
+    <Container className="ps-md-0 order-md-2">
       <Row className="my-4">
         <Col>
           <p className="mb-2 fs-14">
@@ -14,7 +14,7 @@ export function Description() {
           </p>
         </Col>
       </Row>
-      <Row>
+      <Row className="d-md-none">
         <div className="d-grid gap-2 border border-start-0 border-end-0 py-3">
           <Button
             variant="link"

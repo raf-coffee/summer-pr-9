@@ -7,8 +7,23 @@
 @import "../node_modules/bootstrap/scss/variables-dark";
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
+@import "bootstrap/scss/utilities";
 
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/root";
 @import "bootstrap/scss/bootstrap";
 
 @font-face {
@@ -53,4 +68,36 @@ body {
 
 .letter-spacing-1 {
   letter-spacing: 1px;
+}
+
+.arrow {
+  position: relative;
+}
+
+.arrow::after {
+  content: " ";
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 7px solid transparent;
+  border-right: 7px solid rgb(226, 227, 229);
+  border-left: none;
+  border-bottom: 7px solid transparent;
+}
+
+.full-width {
+  min-width: 100%;
+}
+
+.max-width {
+  max-width: 400px;
+}
+
+.max-width-2 {
+  max-width: 600px;
+}
+
+.max-width-3 {
+  max-width: 1200px;
 }
