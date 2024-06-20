@@ -13,7 +13,6 @@
 - TypeScript
 - React
 - Vite
-- React Hook Form
 - SCSS
 - Bootstrap
 - React Bootstrap
